@@ -14,6 +14,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
+// Modifications by github user https://github.com/akaffenberger:
+//      - Renamed the Firebase dependency url from
+//        https://github.com/firebase/firebase-ios-sdk.git to
+//        https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks
 
 import PackageDescription
 
@@ -29,7 +34,8 @@ let package = Package(
   dependencies: [
     .package(
       name: "Firebase",
-      url: "https://github.com/firebase/firebase-ios-sdk.git",
+      /// Modified to use a binary only package dependency for faster built times, and to avoid naming conflicts.
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks",
       "9.0.0" ..< "11.0.0"
     ),
   ],
